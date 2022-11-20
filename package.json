@@ -1,5 +1,5 @@
 {
-  "name": "curso-intro-react",
+  "name": "learning_react_router_dom",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -41,5 +41,5 @@
   "devDependencies": {
     "gh-pages": "^3.2.3"
   },
-  "homepage": "https://platzi.github.io/curso-intro-react"
+  "homepage": "https://DavidEspinoG.github.io/learning_react_router_dom"
 }

@@ -1,8 +1,9 @@
 import React from 'react';
 import './TodoForm.css';
-import { useNavigate} from 'react-router-dom';
+import { useNavigate, useParams} from 'react-router-dom';
 function TodoForm(props) {
-  const [newTodoValue, setNewTodoValue] = React.useState('');
+  const params = useParams()
+  const [newTodoValue, setNewTodoValue] = React.useState(params.text || '');
   const navigate = useNavigate();
   const onChange = (event) => {
     setNewTodoValue(event.target.value);
@@ -10,10 +11,11 @@ function TodoForm(props) {
   const onCancel = () => {
     navigate('/');
   };
+  
   const onSubmit = (event) => {
     event.preventDefault();
-    navigate('/');
     props.submitEvent(newTodoValue);
+    navigate('/');
   };
 
   return (

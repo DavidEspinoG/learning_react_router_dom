@@ -22,13 +22,11 @@ function HomePage() {
     searchedTodos,
     totalTodos,
     completedTodos,
-    // openModal,
     searchValue,
   } = state;
 
   const {
-    // setOpenModal,
-    addTodo,
+    // addTodo,
     completeTodo,
     deleteTodo,
     setSearchValue,
@@ -66,21 +64,13 @@ function HomePage() {
             key={todo.id}
             text={todo.text}
             completed={todo.completed}
-            onEdit={() => navigate('/edit/' + todo.id)}
+            onEdit={() => navigate('/edit/' + todo.id + '/' + todo.text)}
             onComplete={() => completeTodo(todo.id)}
             onDelete={() => deleteTodo(todo.id)}
           />
         )}
       </TodoList>
 
-      {/* {!!openModal && (
-        <Modal>
-          <TodoForm
-            addTodo={addTodo}
-            setOpenModal={setOpenModal}
-          />
-        </Modal>
-      )} */}
 
       <CreateTodoButton
         onClick={() => navigate('/new')}
